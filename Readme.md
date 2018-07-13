@@ -62,7 +62,7 @@ The overall architecture can be broken down into three macro-blocks:
 
 N.B. In order to export SNPS Middleware, Manifest.ml MUST be as follow:
 
-    '''
+
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
     Bundle-Name: Core
@@ -86,7 +86,7 @@ N.B. In order to export SNPS Middleware, Manifest.ml MUST be as follow:
     Import-Package: org.osgi.service.event
     Bundle-ActivationPolicy: lazy
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-    '''
+
 
 4. Goto Core Activator and Decomment The piece of code about "Debug Mode" (CommandLine)
 5. Re-Configure launch configuration:
@@ -96,16 +96,15 @@ N.B. In order to export SNPS Middleware, Manifest.ml MUST be as follow:
     * iptables -t nat -A PREROUTING -p tcp --dport <PORT> -j DNAT --to-destination <IP>:<PORT>
 
 7. In order to grant access to mysqldb, goto mysql and add this:
-   * GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON SensorDB.* TO 'root'@'%' IDENTIFIED BY '<PASSWORD>';
+   * GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON SensorDB.* TO 'root'@'%' IDENTIFIED BY '\<PASSWORD\>';
 
 
 8. add a config.xml on SNPSMDW folder containing:
 
-    '''
-        <client>
-            <config>
-                <ip>192.168.0.8</ip>
-                <port>9090</port>
-            </config>
-        </client>
-    '''
+
+    \<client\>
+        \<config\>
+            \<ip\>192.168.0.8\<\/ip\>
+            \<port\>9090\<\/port\>
+        \<\/config\>
+    \<\/client\>
