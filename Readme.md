@@ -101,10 +101,11 @@ N.B. In order to export SNPS Middleware, Manifest.ml MUST be as follow:
 
 8. add a config.xml on SNPSMDW folder containing:
 
-
+    ```
     \<client\>
         \<config\>
             \<ip\>192.168.0.8\<\/ip\>
             \<port\>9090\<\/port\>
         \<\/config\>
     \<\/client\>
+    ```
