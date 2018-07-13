@@ -17,7 +17,8 @@ public class MySqlDAOFactory extends DataManagerDaoFactory {
       
 		static String dbName = "SensorDB";
 		static String userName = "root";
-		static String password = "francesco";
+		static String password = "root";
+
         public static final String DRIVER="com.mysql.jdbc.Driver";
         final static String DB_URL = "jdbc:mysql://127.0.0.1:3306/"+dbName+"?user="+userName+"&password="+password;
         public static Connection con;

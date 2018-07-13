@@ -172,7 +172,7 @@ public class CommandLine implements Runnable {
 												.getName());
 								ABComponent s;
 								if (reference != null) {
-									String originPath = "/home/francesco/Dropbox/S-SENSORI/DocsMilan/BerkeleyDB/SML";
+									String originPath = Costants.SMLPATH;
 									final File folder = new File(originPath);
 									List<String> flist = listFilesForFolder(folder);
 									System.out.println("Found " + flist.size()
